@@ -2,3 +2,109 @@ http://127.0.0.1:8000/admin/login/ :
 l: superuser
 p: superuser123
 
+user:
+Kosmosila
+Kosmos123
+
+
+Pазвертывание (deploy) — это процесс публикации приложения в интернете, чтобы люди могли наконец увидеть твое творение
+
+github.com:
+l: KosmosilaBY
+p: Kostik112233
+
+www.pythonanywhere.com:
+l: KosmosilaBY
+p: Kostik123
+
+$ git init
+Initialized empty Git repository in ~/djangogirls/.git/
+$ git config --global user.name "Your Name"
+$ git config --global user.email you@example.com
+Инициализировать git-репозиторий придется только один раз за проект (и тебе больше не придется вводить имя пользователя и адрес электронной почты).
+Используй команду git status перед git add или в любой другой момент, когда ты не уверена, что изменения — хорошая идея. Это убережёт тебя от таких неприятных сюрпризов, как добавление неправильных файлов. Команда git status возвращает информацию обо всех ранее неотслеживаемых/изменённых/добавленных в git файлах, а также статус ветки и многое другое. 
+
+https://github.com/KosmosilaBY/my-first-blog.git
+
+Теперь нужно связать локальный репозиторий с репозиторием на GitHub.
+Напечатай у себя в консоли следующую команду (замени <your-github-username> на имя, указанное при создании аккаунта на GitHub, но без угловых скобок):
+command-line
+$ git remote add origin https://github.com/KosmosilaBY/my-first-blog.git
+$ git push -u origin master
+
+Чтобы опубликовать сайт на PythonAnywhere, нужно загрузить на PythonAnywhere твой код с Github и затем настроить PythonAnywhere так, чтобы он распознал твой код и запустил твоё веб-приложение. Существуют способы сделать это «вручную», но для PythonAnywhere есть программа-помощник, которая сделает это для тебя. Давай её установим.
+
+PythonAnywhere command-line
+$ pip3.6 install --user pythonanywhere
+Когда ты это запустишь, в консоли будет печататься лог установки. Он начнётся с чего-то вроде Collecting pythonanywhere, а последней будет строчка Successfully installed (...) pythonanywhere- (...).
+
+Теперь запустим эту вспомогательную утилиту, которую ты только что установила. Она настроит твоё приложение, скачав его код с GitHub. Напечатай следующее в консоли PythonAnywhere (не забудь использовать свой ник на GitHub вместо <your-github-username>, URL в консольной команде должен совпадать с URL, используемый в команде clone):
+
+PythonAnywhere command-line
+$ pa_autoconfigure_django.py https://github.com/kosmosilaby/my-first-blog.git
+
+
+Главное, на что нужно обратить внимание сейчас, — это то, что твоя база данных на PythonAnywhere никак не связана с базой данных на твоём компьютере. Поэтому там будут разные посты и разные аккаунты администраторов. Как следствие, для базы на PythonAnywhere необходимо создать аккаунт администратора так же, как ты это делала у себя локально с помощью команды createsuperuser. На PythonAnywhere заранее активировано виртуальное окружение, так что всё, что тебе нужно сделать — это запустить в консоли PythonAnhywhere команду:
+
+PythonAnywhere command-line
+(ola.pythonanywhere.com) $ python manage.py createsuperuser
+
+
+База данных на pythonanywhere:
+l: kosmosilaby
+p: Kosmosila112233
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
